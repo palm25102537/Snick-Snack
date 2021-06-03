@@ -1,38 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: whitesmoke;
+}
 .App {
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-logo {
+  height: 100px;
+  border-radius: 200px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.header-search-button {
+  border-radius: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.header-navbar {
+  margin-top: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-navbar-a {
+  text-decoration: none;
+  color: gray;
+}
+.header-navbar-a:hover {
+  color: #ef5da8;
+  font-size: 150%;
+}
+.app-grid {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  column-gap: 50px;
+  row-gap: 40px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.product-style {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin-top: 15px;
+}
+
+.button-nav-in {
+  margin-right: 200px;
+  margin-left: 100px;
+}
+.button-nav-out-home {
+  margin-right: 100px;
+}
+.button-nav-out-sign {
+  margin-left: 100px;
+}
+.signin-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.signin {
+  width: 50%;
+}
+
+.signin-container-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1200px) {
+  .app-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 10px;
+    row-gap: 40px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
   }
 }
+
+@media only screen and (max-width: 425px) {
+  .app-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 10px;
+    row-gap: 40px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+} ;
